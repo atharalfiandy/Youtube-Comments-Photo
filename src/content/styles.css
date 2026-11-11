@@ -1,0 +1,129 @@
+:root {
+  --yt-photo-accent: #ff2d55;
+  --yt-photo-surface: rgba(17, 17, 17, 0.92);
+  --yt-photo-border: rgba(255, 255, 255, 0.1);
+  --yt-photo-shadow: rgba(0, 0, 0, 0.28);
+}
+
+.yt-photo-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--yt-photo-border);
+  background: var(--yt-photo-surface);
+  box-shadow: 0 10px 25px var(--yt-photo-shadow);
+}
+
+.yt-photo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff2d55, #ff9f43);
+  color: #ffffff;
+  padding: 9px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255, 45, 85, 0.4);
+}
+
+.yt-photo-btn:hover {
+  filter: brightness(1.05);
+}
+
+.yt-photo-icon {
+  font-size: 1.1rem;
+}
+
+.yt-photo-file-input {
+  display: none;
+}
+
+.yt-photo-preview {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 52px;
+}
+
+.yt-photo-preview-thumb {
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--yt-photo-border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.yt-photo-preview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.yt-photo-injected-comment {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.yt-photo-comment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.yt-photo-comment-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.yt-photo-comment-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff2d55, #ff9f43);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+}
+
+.yt-photo-comment-author {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.yt-photo-comment-text {
+  color: #f4f4f4;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
+
+.yt-photo-comment-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.yt-photo-comment-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Photo Comments</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup-shell">
+      <div class="header">
+        <div class="logo">📷</div>
+        <div>
+          <h1>YouTube Photo</h1>
+          <p>Photo comments</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <label class="upload-label" for="photoInput">Choose photo from your device</label>
+        <input id="photoInput" type="file" accept="image/*" multiple />
+      </div>
+
+      <div id="preview" class="preview"></div>
+
+      <button id="saveButton" type="button" class="primary-btn">Save to browser</button>
+      <p id="status" class="status">Open YouTube and click the Photo button inside the comment box.</p>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Photo Comments",
+  "version": "1.0.0",
+  "description": "Adds photo attachment support to YouTube comments with a TikTok-like photo comment experience.",
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "YouTube Photo Comments",
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["src/content/youtube-comment-photo.js"],
+      "css": ["src/content/styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/content/styles.css",
+        "assets/icons/*.svg"
+      ],
+      "matches": [
+        "*://*.youtube.com/*"
+      ]
+    }
+  ]
+}
